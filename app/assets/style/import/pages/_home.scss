@@ -1,0 +1,350 @@
+// @import "../_variable.scss";
+// @import "../_mixin";
+.banner{
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") center center;
+    background-size: cover;
+    height: 840px;
+    @include mobile{
+        height: 394px;    
+    }
+    .slogan{
+        text-align: right;
+        padding-top: 348px;
+        color:$fontColor-darkred;
+        @include pad{
+            padding-top: 372px;
+        }
+        @include mobile{
+            padding-top: 164px;
+        }
+        span{
+            font-size: 36px;
+            line-height: 54px;
+            @include pad{
+                font-size: 20px;
+                line-height: 30px;
+            }
+            @include mobile{
+                font-size: 16px;
+            }
+        }
+        p{
+            font-size: 64px;
+            line-height: 96px;
+            font-weight: bold;
+            @include pad{
+                font-size: 48px;
+                line-height: 72px;
+            }
+            @include mobile{
+                font-size: 32px;
+                line-height: 45px; /*設計稿lh=72px,但網頁看起來span與p距離和設計稿不符,所以改為h45px*/
+            }
+        }
+    }
+}
+
+/*feature用專業的心做專業的事*/
+.feature{
+    background-color: $lightpink;
+    @include homeTemplate;
+    @include pad{
+        padding-bottom: 24px; /*56設計稿距離-32(li mb32)*/
+    }
+    @include mobile{
+        padding-bottom: 8px; /*40設計稿距離-32(li mb32)*/
+    }
+    h2{
+        color: $fontColor-darkred;
+    }
+    .fetCard-List{
+        @include pad{
+            justify-content: space-around; /*設計稿左右沒靠齊container*/
+        }
+        .fet-Card{
+            width: 23%; /*容器寬度1110-mr30*3個間隔=1020 1020/4=255每個區塊寬度 255/1110=22.9% */
+            @include pad{
+                width: 37%; /*255區塊/690容器寬度=0.369*/
+            }
+            @include mobile{
+                width: 75%; /*270/360=0.708* 270=255+左右jcsa的gutter15*/
+                
+            }
+            .fetCard-img{
+                height: 100px;
+                img{
+                    margin: auto;
+                }
+                
+            }
+            .fetCard-content{
+                @include fetCardContentTemp;
+
+            }
+        }
+    }
+}
+
+/*series經典系列鏡框*/
+.series{
+    @include homeTemplate;
+    padding-bottom: 48px;/*80-li的mb32=48 &pad 56-li的mb8*/
+    h2{
+        color:$fontColor-darkred;
+    }
+    .seriesType{
+        li{
+            @include mobile{
+                position: relative;
+            }
+        }
+        img{
+            max-width: 635px;
+            @include pad{
+                max-width: 390px;
+            }
+            @include mobile{
+                max-width: 100%;
+                
+            }
+        }
+        p{
+            color: $mainColor-red;
+            font-style: italic;
+            font-size: 48px;
+            /* white-space: nowrap;
+            overflow:auto;
+            因設計稿fz48px SUNGLASSES&FUNCTIONAL 在1050時會換行行*/
+            line-height: 72px;
+            font-weight: bold;
+            display: inline;
+            @include pad{
+                font-size: 28px;
+            }
+            @include mobile{
+                position: absolute;
+                // white-space: nowrap;
+                line-height :24px; 
+                left: 55px;
+            }
+        }
+        .type-2{
+            flex-direction: row-reverse;
+            @include pad{
+                flex-direction: row;
+            }
+            img{
+                margin-left: 32px;
+                @include pad{
+                    margin: 0 30px 0 0;
+                }
+            }
+        }
+        .type-1,.type-3{
+            img{
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+/*cobranded聯名設計鏡框*/
+.coBranded{
+    @include homeTemplate;
+    @include mobile{
+        padding-bottom: 24px; /*40-mb16(li向下推的)*/
+    }
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png") center center;
+    background-size: cover;
+    h2{
+        color: $white;
+    }
+    .coBrandName{
+        li{
+            position: relative;
+            background-color: $white;
+            max-width: 48.6%; /*540/1110=0.486*/
+            @include pad{
+                max-width: 47.8%; /*330/690=0.478*/
+            }
+            @include mobile{
+                max-width: 101%; /*不知道為什麼100%圖片右邊會沒被覆蓋到背景白色*/
+            }
+            img{
+                height: 455px;
+                opacity: 0.5; 
+                @include pad{
+                    height: 278px;
+                }
+                @include mobile{
+                    height: 291px;
+                }
+            }
+            p{
+                font-size: 72px;
+                line-height: 108px;
+                font-weight: 700;
+                position: absolute;
+                top: 38%;
+                left: 25%;
+                color: $mainColor-red;
+            @include pad{
+                font-size: 32px;
+                line-height: 25px;
+                font-weight: bold;
+                top: 48%;
+                left: 32%;
+
+                }
+            }
+        }
+    }
+}
+
+/*recommend顧客推薦*/
+.recommend{
+    @include homeTemplate;
+    @include pad{
+        padding-bottom: 24px;/*56-mb32 &mobile40-mb16*/
+    }
+    h2{
+        color: $fontColor-darkred;
+    }
+    .recCard-list{
+        .rec-Card{
+            max-width: 23%;
+            box-shadow: 0px 2px 6px $lightgrey;
+            @include pad{
+                max-width: 47%;
+            }
+            @include mobile{
+                max-width: 98%; /*圖片右邊才沒留白*/
+            }
+            .recCard-img{
+                img{
+                    height: 256px;
+                }
+            }
+            .recCard-content{
+                @include recCardContentTemp;
+            }
+        }
+    }  
+}
+/*contactUs聯絡我們*/
+.contactUs{
+    @include homeTemplate;
+    background-color: $lightpink;
+    p{
+        max-width: 730px;
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0 auto 20px;
+        @include pad{
+            max-width: 450px;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0 auto 16px; /*120=(690-450)/2*/
+        }
+        @include mobile{
+           margin: 0 auto;
+        }
+    }
+    .contact-formgroup{
+        max-width: 730px;
+        margin: 0 auto 16px; /*190=(1110-730)/2*/
+        @include pad{
+            max-width: 450px;
+            margin: 0 120px 8px; /*120=(690-450)/2*/
+            font-size: 14px;
+            line-height: 21px;
+        }
+        @include mobile{
+            margin: 0 auto 8px;
+        }
+        input{
+            display: block;
+            border: 1px solid $black;
+            height: 50px;
+            width: 730px;
+            font-size: 16px;
+            line-height: 24px;
+            @include pad{
+                font-size: 14px;
+                line-height: 21px;
+                height: 36px;
+                width: 450px;
+            }
+            @include mobile{
+                max-width: 100%;
+            }
+        }
+            
+    }
+    .opinion-text{
+        textarea{
+            display: block;
+            width: 100%;
+            height: 136px;
+            border: 1px solid $black;
+            font-size: 16px;
+            line-height: 24px;
+            @include pad{
+                height: 100px;
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+    }
+    .checkbox{
+        max-width: 730px;
+        margin: 0 auto 40px;
+        @include pad{
+            max-width: 450px;
+            margin: 0 auto 20px;
+        }
+        @include mobile{
+            margin: 0 auto 20px;
+        }
+        input[type="checkbox"]{
+            display: inline;
+            margin: 0 4px 6px 0;
+            vertical-align: middle;
+            width: 24px;
+            height: 24px;
+            @include pad{
+                width: 17.6px;
+                height: 17.6px;
+                /*text-indent: -14px;
+                margin-left: 14px; 第二行縮排無效*/  
+            }
+        } 
+    }
+    .contact-btn{
+        margin: 0 auto;
+        text-align: center;
+        input[type="submit"]{
+            width: 350px;
+            height: 54px;
+            color: $white;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            background-color:$mainColor-red ;
+            border: none;
+            @include pad{
+                width: 210px;
+                height: 40px;
+                font-size: 14px;
+                line-height: 21px;
+            }
+            @include mobile{
+                width: 165px;
+                height: 36px;
+            }
+            &:hover{
+                background-color:$fontColor-darkred ;
+            }
+        } 
+    }
+}

@@ -1,0 +1,260 @@
+// @import "../_variable.scss";
+// @import "../_mixin";
+/*sub-nav商品選單*/
+.sub-Nav{
+    .prod-Series{        
+        font-size: 32px;
+        line-height: 50px;
+        text-align: center;
+        @include pad{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        @include mobile{
+            font-size: 14px;
+            line-height: 14px;
+        }
+        li{
+            border: 1px solid $midgrey;
+            width: 33.3%;
+            margin:0 -1px -1px 0;
+            @include mobile{
+                margin-top: -1px;
+            }
+            
+            a{
+                text-decoration: none;
+                display: block;
+                color: $black;
+                font-weight: bold;
+                padding: 27px 0;
+                border-bottom: 8px solid transparent; //設透明滑過背景就不會跳動
+                @include pad{
+                    padding: 14px 0;
+                }
+                @include mobile{
+                    padding: 5px 0;
+                    border-bottom: 4px solid transparent;
+                    white-space: nowrap;
+                    overflow:auto;
+                }
+                span{
+                    margin-right: 10px;
+                    @include pad{
+                        margin-right: 9px;
+                    }
+                    @include mobile{
+                        margin-right: 2px;
+                    }
+                }
+                &:hover{
+                    border-bottom: 8px solid $mainColor-red;
+                    @include mobile{
+                        border-bottom: 4px solid $mainColor-red;
+                    }
+                }
+            }
+        }
+    }
+}
+/*prod-banner兩張圖片*/
+.prod-Banner{
+    .prod-Banner-lg{
+        @include pad{
+            display: none;
+        }
+    }
+    .prod-Banner-md{
+        display: none;
+        @include pad{
+            display: block;
+            display: flex;
+            justify-content: center;
+        }
+        @include mobile{
+            display: none;
+        }
+        li{
+            @include pad{
+                width: 100%;
+            }
+            img{
+                @include pad{
+                    height: 304px;
+                    width: 100%;
+                }
+            }
+    
+        }
+    }
+    .prod-Banner-sm{
+        display: none;
+        @include mobile{
+            display: block;
+            display: flex;
+            justify-content: center;
+        }
+        li{
+            @include mobile{
+               width: 100%; 
+            } 
+            img{
+                @include mobile{
+                    height: 148px;
+                    width: 100%;
+                }
+                
+            }
+        }
+    }
+}
+/*productList 商品列表*/
+.productList{
+   .prodList-Title{
+        text-align: center;
+        margin: 80px 0 40px;
+        @include pad{
+            margin: 56px 0 32px;
+            }
+        @include mobile{
+            margin: 32px 0 20px;
+            }
+    .prodList-Title-en{
+        font-size: 42px;
+        line-height: 63px;
+        @include pad{
+            font-size: 32px;
+            line-height: 48px;
+            }
+        @include mobile{
+            font-size: 20px;
+            }
+        }
+    .prodList-Title-ch{
+        font-size: 32px;
+        line-height: 48px;
+        @include pad{
+            font-size: 24px;
+            line-height: 36px;
+            }
+        @include mobile{
+            font-size: 16px;
+            }
+        }
+    }
+    /*optical*/
+    .prod-Op-content{
+        .op-Card{
+            li{
+                max-width: 23%;
+                @include pad{
+                    max-width: 47.8%;
+                }
+                @include mobile{
+                    max-width: 100%;
+                }
+                img{
+                  width: 255px;
+                  height: 164px;
+                  @include pad{
+                      width: 330px;
+                  }
+                  @include mobile{
+                      width: 345px;
+                      height: 166px;
+                  }  
+                }
+                .prod-Detail{
+                   @include proCardDetailTemp;
+
+                }
+                .brown{
+                    @include prodColor-Brown;
+
+                }
+                .orange{
+                    @include prodColor-Orange;
+                }
+            }
+
+        }
+        
+    }
+    /*sunglasses*/
+    .prod-Sun-content{
+        margin-bottom: 56px;/*160-li的mb104*/
+        @include pad{
+            margin-bottom: 24px;/*96- md li的mb72*/
+        }
+        /*手機板跟分頁距離計算為主*/
+        .sun-Card{
+            li{
+                max-width: 31.5%;
+                @include pad{
+                    max-width: 47.8%;
+                }
+                @include mobile{
+                    max-width: 100%;
+                }
+                img{
+                    width: 350px;
+                    height: 224px;
+                    @include pad{
+                        width: 330px;
+                        height: 164px;
+                    }
+                    @include mobile{
+                        width: 345px;
+                        height: 166px;
+                    }
+                }
+                .prod-Detail{
+                    @include proCardDetailTemp;
+                }
+                .brown{
+                    @include prodColor-Brown;
+                }
+                .orange{
+                    @include prodColor-Orange;
+                }
+            }
+        }
+    }
+
+}
+/*optical分頁*/
+.pagination-op{
+    /*商品列表與分頁的距離調整*/
+    margin: -8px 0 160px;
+    @include pad{
+        margin: -7px 0 96px;
+    }
+    @include mobile{
+        margin: 8px 0 56px;
+    }
+    @include paginaTemp;
+    .page-Btn{
+        @include pageBtn;
+    }
+    .page-Num{
+       @include pageNumber;
+    }
+}
+/*sunglasses 分頁*/
+.pagination-sun{
+    display: none;
+    @include mobile{
+       display: flex;
+       margin: 8px 0 56px; /*sm商品與分頁距離*/
+    }
+    @include paginaTemp;
+    .page-Btn{
+        @include pageBtn;
+    }
+    .page-Num{
+        @include pageNumber;
+    }
+}
+
+
+

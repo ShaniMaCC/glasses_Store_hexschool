@@ -1,0 +1,146 @@
+//RWD 992~768 pad模式
+@mixin pad {
+    @media(max-width: 992px){
+        @content;
+    }
+}
+//RWD 767以下 手機模式
+@mixin mobile {
+    @media (max-width:767px) {
+        @content;
+    }
+}
+//圖片取代文字
+@mixin imgReplace{
+    text-indent:101%;
+    overflow:hidden;
+    white-space:nowrap;
+} 
+//home每section上下推擠
+@mixin homeTemplate {
+    padding: 60px 0 80px;
+    h2{
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    @include pad{
+        padding: 40px 0 56px;
+        h2{
+            margin-bottom: 32px;
+        }
+    }
+    @include mobile{
+        padding: 32px 0 40px;
+        h2{
+            margin-bottom: 20px;
+        }
+    }
+}
+/*home feture-card-content文字內容版型*/
+@mixin fetCardContentTemp{
+    margin-top: 16px;
+    h4{
+        text-align: center;
+        font-weight: bold;
+        color: $fontColor-darkred;
+        margin-bottom: 8px;
+    }
+}
+/*home recommend-card-content文字內容版型*/
+@mixin recCardContentTemp {
+    padding: 16px;
+    height: 204px;
+    position: relative;
+    h6{
+        color: $darkgrey;
+    }
+    p{
+        color: $darkgrey;
+    }
+    span{
+        color: $grey;
+        font-size: 14px;
+        line-height: 21px;
+        position: absolute;
+        bottom: 16px;
+    } 
+}
+/*product card-detail 型號價錢版型*/
+@mixin proCardDetailTemp {
+    h4{
+        @include pad{
+            font-size: 24px;
+            line-height: 30px;
+        }
+        @include mobile{
+            font-size: 16px;
+        }
+
+    }
+    h4.prod-Price{
+        color: $mainColor-red;
+        font-weight: bold;
+    } 
+}
+/*product card-color產品色塊*/
+@mixin prodColor-Brown {
+    background-color: $brown;
+    padding: 12px;
+    border-radius: 4px;
+}
+@mixin prodColor-Orange {
+    background-color: $darkorange;
+    padding: 12px;
+    border-radius: 4px;
+}
+/*pagination 分頁模板*/
+@mixin paginaTemp {
+    text-align: center;
+    li{
+        border: 1px solid $irongrey;
+        margin-right: -1px;
+        a{
+            display: block;
+            text-decoration: none;
+            color: $irongrey;
+        }        
+    }
+}
+@mixin pageBtn {
+    font-size: 19px;
+    line-height: 29px;
+    @include mobile{
+        font-size: 17px;
+        line-height: 26px;
+        white-space: nowrap; /*因為字體大小會換行,強制不換行但有超過container*/
+        
+    }
+    a{
+        padding: 11px 12px;
+        @include mobile{
+            padding: 10.5px 12px;
+        }
+        &:hover{
+            background-color: $palegrey;
+        }
+    }     
+}
+@mixin pageNumber {
+    font-size: 18px;
+    line-height: 27px;
+    @include mobile{
+        font-size: 16px;
+        line-height: 21px;
+    }
+    a{
+        padding: 12px 16px;
+        @include mobile{
+            padding: 12px 15px;
+        }
+        &:hover{
+            color: $white;
+            background-color: $black; 
+        }
+    }
+}
