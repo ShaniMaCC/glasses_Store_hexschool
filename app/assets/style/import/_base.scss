@@ -10,16 +10,14 @@
 //   unicode-range:U+00-024F ;
 // }
 body{
-  font-family:'Roboto', 'Noto Sans TC', sans-serif;
+  font-family:-apple-system, BlinkMacSystemFont, Roboto, "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
 }
 h2{
   font-size: 48px;
-  line-height: 72px;
   @include pad{
     font-size: 32px;
-    line-height: 48px;
   }
   @include mobile{
     font-size: 20px;
@@ -28,21 +26,28 @@ h2{
 }
 h3{
   font-size: 36px;
-  line-height: 54px;
   @include pad{
     font-size: 20px;
-    line-height: 30px;
   }
 }
 h4{
   font-size: 24px;
-  line-height: 36px;
 }
 h5{
   font-size: 20px;
-  line-height: 30px;
 }
 h6{
   font-size: 14px;
-  line-height: 21px;
+}
+/*容器*/
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include pad{
+      max-width: 720px;
+  }
+  @include mobile{
+      max-width: 360px;
+  }
 }
