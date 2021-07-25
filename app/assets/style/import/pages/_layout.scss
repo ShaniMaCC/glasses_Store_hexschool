@@ -73,6 +73,62 @@
     }
   }    
 
+  .sub-Nav{
+    .prod-Series{        
+        font-size: 32px;
+        line-height: 50px;
+        text-align: center;
+        @include pad{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        @include mobile{
+            font-size: 14px;
+            line-height: 14px;
+        }
+        li{
+            border: 1px solid $midgrey;
+            width: 33.3%;
+            margin:0 -1px -1px 0;
+            @include mobile{
+                margin-top: -1px;
+            }
+            
+            a{
+                text-decoration: none;
+                display: block;
+                color: $black;
+                font-weight: bold;
+                padding: 27px 0;
+                border-bottom: 8px solid transparent; //設透明滑過背景就不會跳動
+                @include pad{
+                    padding: 14px 0;
+                }
+                @include mobile{
+                    padding: 5px 0;
+                    border-bottom: 4px solid transparent;
+                    white-space: nowrap;
+                    overflow:auto;
+                }
+                span{
+                    margin-right: 10px;
+                    @include pad{
+                        margin-right: 9px;
+                    }
+                    @include mobile{
+                        margin-right: 2px;
+                    }
+                }
+                &:hover{
+                    border-bottom: 8px solid $mainColor-red;
+                    @include mobile{
+                        border-bottom: 4px solid $mainColor-red;
+                    }
+                }
+            }
+        }
+    }
+}
   
   .footer {
     background-color: $mainColor-red;
