@@ -35,7 +35,21 @@
 .mb-13{
     margin-bottom: 104px;
 }
-/*footerContent mb*/
+.mb-20{
+    margin-bottom: 160px;
+}
+.mr-22p{
+    margin-right: 22px;
+}
+/*lacation label*/
+.mr-5-4{
+    margin-right: 20px;
+}
+/*location card*/
+.mr-15-2{
+    margin-right: 30px;
+}
+/*footerContent+faqtop mb*/
 .mb-9-4{
     margin-bottom: 36px;
 }
@@ -52,7 +66,11 @@
 .pr-8{
     padding-right: 64px;
 }
-/*footerRight pd*/
+/*location select*/
+.pl19{
+    padding-left: 19px;
+}
+/*footerRight pb*/
 .pb39{ 
     padding-bottom: 39px;
 }
@@ -82,12 +100,27 @@
         margin-bottom: 72px;
     }
 }
+.md-mb-12{
+    @include pad{
+        margin-bottom: 96px;
+    }
+}
 .md-mb-9-2{
     @include pad{
         margin-bottom: 18px;
     }
 }
+.md-mr-5-4{
+    @include pad{
+        margin-right: 20px;
+    }
+}
 /*padding for PAD*/
+.md-pl-2{
+    @include pad{
+        padding-left: 16px;
+    }
+}
 .md-pb-4{
     @include pad{
         padding-bottom: 32px;
@@ -116,14 +149,29 @@
     }
     
 }
+.sm-mb-3{
+    @include mobile{
+        margin-bottom: 24px;
+    }
+}
 .sm-mb-4{
     @include mobile{
         margin-bottom: 32px;
     }
 }
+.sm-mb-7{
+    @include mobile{
+        margin-bottom: 56px;
+    }
+}
 .sm-mr-1-4{
     @include mobile{
         margin-right: 4px;
+    }
+}
+.sm-mr-3-4{
+    @include mobile{
+        margin-right: 12px;
     }
 }
 .sm-mb-5-4{
@@ -148,6 +196,11 @@
 }
 .d-flex{
     display: flex;
+}
+.md-d-flex{
+    @include pad{
+        display: flex;
+    }
 }
 .sm-d-flex{
     @include mobile{
@@ -189,7 +242,7 @@
         height: 40px;
     }
   }
-/*icon-prod_1*/
+/*icon-prod_1(layout_prod)*/
 .material-icons-outlined-prod{
     font-family: 'Material Icons';
     font-style: normal;
@@ -204,4 +257,17 @@
         width: 14.66px;
         height: 14.66px;
     }
+  }
+  /*locationCard-Content*/
+  .material-icons-outlined-loca{
+    font-family: 'Material Icons';
+    font-style: normal;
+    color: $darkgrey;
+    width: 24px;
+    height: 24px;
+    @include pad{
+        width: 20px;
+        height: 20px;
+    }
+
   }

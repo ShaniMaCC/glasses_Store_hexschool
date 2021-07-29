@@ -1,0 +1,61 @@
+---
+title: Branch
+layout: ./app/layout.ejs
+engine: ejs
+current: 
+---
+<section class="location_branch">
+    <div class="branch_top container">
+        <h2>門市據點</h2>
+        <form action="#">
+            <label for="store_branch" class="mr-22p md-mr-5-4 sm-mr-3-4">選擇分店</label>
+            <select name="branch" id="branch" class="mb-4 md-mb-3 sm-mb-5-4 pl19 md-pl-2 ">
+                <optgroup label="北區">
+                    <option value="台北中山旗艦店">台北中山旗艦店</option>
+                    <option value="新北中山旗艦店">新北中山旗艦店</option>
+                    <option value="桃園中山旗艦店">桃園中山旗艦店</option>
+                </optgroup>
+                <optgroup label="中區">
+                    <option value="台中中山旗艦店">台中中山旗艦店</option>
+                </optgroup>
+                <optgroup label="南區">
+                    <option value="台南中山旗艦店">台南中山旗艦店</option>
+                    <option value="高雄中山旗艦店">高雄中山旗艦店</option>
+                </optgroup>
+            </select>
+        </form>
+    </div>
+    <div class="container">
+        <div class="branch_main d-flex mb-20 md-mb-12 sm-mb-7">
+            <div class="branchCard md-d-flex">
+                <div class="branchCard-Img">
+                    <img src="./assets/images/locate1.jpeg" alt="台北中山旗艦店">
+                </div>             
+                <div class="branchCard-Body">
+                    <h4 class="branchCard-Title">台北中山旗艦店</h4>
+                    <ul class="branchCard-Content">
+                        <li>
+                            <h5><span class="material-icons-outlined-loca">
+                                call
+                                </span>電話：(02)000-1234</h5>
+                        </li>
+                        <li>
+                            <h5><span class="material-icons-outlined-loca">
+                                schedule
+                                </span>營業時間：10:00-21:00</h5>
+                        </li>
+                        <li>
+                            <h5><span class="material-icons-outlined-loca">
+                                location_on
+                                </span>地址：台北市中山區南京東路25巷2-1號</h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="branchMap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4731951286767!2d121.53022861405306!3d25.05194604372785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96124776939%3A0xc481539a4cf6a97f!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDljZfkuqzmnbHot6_kuozmrrU!5e0!3m2!1szh-TW!2stw!4v1627480209103!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>   
+    </div>
+    
+</section>

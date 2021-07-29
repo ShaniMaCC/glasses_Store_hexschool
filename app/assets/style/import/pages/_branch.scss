@@ -1,0 +1,85 @@
+.location_branch{
+    @include location-faq-Template;
+    .branch_top{
+        @include locateSelectTemp;
+    }
+    .branch_main{
+        @include pad{
+            display: block;
+        }
+        .branchCard{
+            color: $darkgrey;
+            margin-right: 30px;
+            @include pad{
+                margin: 0 0 32px 0;  
+            }
+            @include mobile{
+                display: block;
+                margin-bottom: 16px;
+            }
+            img{
+                @include pad{
+                    width: 100%; 
+                    height: 164px;
+                    // margin-right: 30px;
+                    
+                }
+                
+            }
+            .branchCard-Img{
+                @include pad{
+                    width: 330px;
+                    margin-right: 30px;
+                } 
+                @include mobile{
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+            .branchCard-Body{
+                border: 1px solid $lightgrey;
+                @include pad{
+                    width: 330px;
+                }
+                @include mobile{
+                    width: 100%;
+                }
+                .branchCard-Title{
+                    font-weight: bold;
+                    padding: 12px 24px;
+                    border-bottom: 1px solid $lightgrey;
+                    @include pad{
+                        padding: 8.5px 16px 7.5px;
+                        font-size: 16px;
+                    }
+                    @include mobile{
+                        padding: 8px 24px;
+                    }
+    
+                }
+                .branchCard-Content{
+                    padding: 16px 24px 8px;
+                    li{
+                        margin-bottom: 8px;
+                    }
+                    h5{
+                        @include pad{
+                            font-size: 14px;
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+        .branchMap{
+            iframe{
+                height: 100%;
+                @include pad{
+                    width: 100%;
+                    height: 422px;
+                }
+            }
+        }
+    }
+}

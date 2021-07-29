@@ -28,16 +28,18 @@
         padding: 40px 0 56px;
         h2{
             margin-bottom: 32px;
+            font-size: 32px;
         }
     }
     @include mobile{
         padding: 32px 0 40px;
         h2{
-            margin-bottom: 20px;
+            margin-bottom: 20px;        
+            font-size: 20px;
         }
     }
 }
-/*home feture-card-content文字內容版型*/
+/*home feature-card-content文字內容版型*/
 @mixin fetCardContentTemp{
     margin-top: 16px;
     h4{
@@ -50,7 +52,7 @@
 /*home recommend-card-content文字內容版型*/
 @mixin recCardContentTemp {
     padding: 16px;
-    height: 204px;
+    height: 204px; /*可以不寫死高度,用padding上下推 但p段落要另外寫margin推日期*/
     position: relative;
     h6{
         color: $darkgrey;
@@ -93,6 +95,61 @@
     background-color: $darkorange;
     padding: 12px;
     border-radius: 4px;
+}
+/*location+faq section 上下推擠h2文字內容版型*/
+@mixin location-faq-Template {
+    padding-top: 96px;
+    @include pad{
+        padding-top: 60px;
+    }
+    @include mobile{
+        padding-top: 28px;
+    }
+    h2{
+        font-weight: bold;
+        margin-bottom: 60px;
+        padding-left: 16px;
+        border-left: 8px solid $midred;
+        @include pad{
+            margin-bottom: 40px;
+            border-left: 4px solid $brickred;
+        }
+        @include mobile{
+            font-size: 28px;
+            margin-bottom: 24px;
+            padding-left: 8px;
+            border-color: $midred;
+        }
+    }
+}
+/*location select設定*/
+@mixin locateSelectTemp {
+    label{
+        font-size: 24px;
+        @include pad{
+            font-size: 16px;
+        }
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+    select{
+        font-size: 18px;
+        color:$silver;
+        height: 45px;
+        width: 324px;
+        @include pad{
+            font-size: 16px;
+            height: 46px;
+            width: 237px;
+        }
+        @include mobile{
+            font-size: 14px;
+            height: 36px;
+            max-width: 76.9%;
+
+        }
+    }
 }
 /*pagination 分頁模板*/
 @mixin paginaTemp {
