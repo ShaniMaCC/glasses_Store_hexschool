@@ -17,11 +17,17 @@
 .mr-3{
     margin-right: 24px;
 }
+.mb-3{
+    margin-bottom: 24px;
+}
 .mb-4{
     margin-bottom: 32px;
 }
 .mr-4{
     margin-right: 32px;
+}
+.mt-5{
+    margin-top: 40px;
 }
 .mb-5{
     margin-bottom: 40px;
@@ -49,11 +55,20 @@
 .mr-15-2{
     margin-right: 30px;
 }
+.mb-15-4{
+    margin-bottom: 60px;
+}
 /*footerContent+faqtop mb*/
 .mb-9-4{
     margin-bottom: 36px;
 }
 /*padding for PC*/
+.pr-2{
+    padding-right: 16px;
+}
+.pl-2{
+    padding-left: 16px;
+}
 .pb-3{
     padding-bottom: 24px;
 }
@@ -90,9 +105,19 @@
         margin-bottom: 24px;
     }
 }
+.md-mt-4{
+    @include pad{
+        margin-top: 32px;
+    }
+}
 .md-mb-4{
     @include pad{
         margin-bottom: 32px;
+    }
+}
+.md-mb-5{
+    @include pad{
+        margin-bottom: 40px;
     }
 }
 .md-mb-9{
@@ -116,6 +141,11 @@
     }
 }
 /*padding for PAD*/
+.md-pr-1{
+    @include pad{
+        padding-right: 8px;
+    }
+}
 .md-pl-2{
     @include pad{
         padding-left: 16px;
@@ -137,6 +167,7 @@
     }
 }
 /*margin for Mobile*/
+
 .sm-mb-1{
     @include mobile{
         margin-bottom: 8px;
@@ -179,7 +210,27 @@
         margin-bottom: 20px;
     }
 }
+.sm-mt-7-4{
+    @include mobile{
+        margin-top: 28px;
+    }
+}
+.sm-mb-7-4{
+    @include mobile{
+        margin-bottom: 28px;
+    }
+}
 /*padding for Mobile*/
+.sm-pl-1{
+    @include mobile{
+        padding-left: 8px;
+    }
+}
+.sm-pr-1-4{
+    @include mobile{
+        padding-right: 4px;
+    }
+}
 .sm-pb-3{
     @include mobile{
         padding-bottom: 24px;
@@ -197,9 +248,17 @@
 .d-flex{
     display: flex;
 }
+.d-none{
+    display: none;
+}
 .md-d-flex{
     @include pad{
         display: flex;
+    }
+}
+.md-d-none{
+    @include pad{
+        display: none;
     }
 }
 .sm-d-flex{
@@ -270,4 +329,10 @@
         height: 20px;
     }
 
+  }
+  /*blog layout*/
+  .material-icons-outlined-blogsearch{
+    font-family: 'Material Icons';
+    font-style: normal;
+    color: $white;
   }

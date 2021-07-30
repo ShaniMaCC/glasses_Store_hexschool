@@ -1,0 +1,15 @@
+.blog-Tags{
+    a{
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+        color: $mainColor-red;
+        font-size: 24px;
+        @include pad{
+            font-size: 16px;
+        }
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+}

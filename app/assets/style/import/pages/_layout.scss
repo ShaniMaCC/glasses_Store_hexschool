@@ -1,5 +1,3 @@
-// @import "../_variable.scss";
-// @import "../_mixin.scss";
 .header {
     background-color: $mainColor-red;
     padding: 30px 88px;
@@ -72,7 +70,7 @@
       }
     }
   }    
-
+/*product layout*/
   .sub-Nav{
     .prod-Series{        
         font-size: 32px;
@@ -129,7 +127,38 @@
         }
     }
 }
-  
+/*blog layout*/
+.blog-Header{
+  background-color: $fontColor-darkred;
+  @include mobile{
+    display: none;
+  }
+  .blog-Nav{
+    
+    a{
+      display: block;
+      text-decoration: none;
+      padding-right: 48px;
+      color: $white;
+      font-weight: bold;
+      font-size: 20px;
+      @include pad{
+        font-size: 16px;
+      }
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+    
+    .blog-Search{
+      a{
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+
   .footer {
     background-color: $mainColor-red;
     .footerContent{

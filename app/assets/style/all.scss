@@ -3,12 +3,18 @@
 @import "import/_mixin.scss";
 @import "import/_base.scss";
 @import "import/_utils.scss";
+
+//layout
 @import "import/pages/_layout.scss";
+//page
+
 @import "import/pages/_home.scss";
 @import "import/pages/_product.scss";
 @import "import/pages/_location.scss";
 @import "import/pages/_branch.scss";
 @import "import/pages/_faq.scss";
+@import "import/pages/_blog.scss";
+@import "import/pages/blog-content.scss";
 
 
 

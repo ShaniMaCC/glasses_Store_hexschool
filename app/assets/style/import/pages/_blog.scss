@@ -1,0 +1,143 @@
+.blog-top{
+   font-weight: bold;
+   border-left: 8px solid $midred;
+   @include pad{
+       border-left: 4px solid $brickred;
+   }
+   @include mobile{
+       font-size: 28px;
+       border-color: $midred;
+   } 
+}
+.blogCard{
+    position: relative;
+    &-Img{
+        max-width: 57.2%;
+        @include pad{
+            max-width: 47.8%;
+        }
+        @include mobile{
+            max-width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &-Body{
+        max-width: 40%;
+        @include pad{
+            max-width: 46.6%;
+        }
+        @include mobile{
+            max-width: 100%;
+            width: 100%; //如果只設maw100%他並不會跟著li一樣100%不知道為什麼
+        }
+        
+    }
+    &-Title{
+        font-size: 32px;
+        color: $fontColor-darkred;
+        @include pad{
+            font-size: 20px;
+        }
+        @include mobile{
+            font-size: 16px;
+        }
+
+    }
+    &-SubTitle{
+        h5{
+            font-weight: bold;
+            @include pad{
+                font-size: 16px;
+            }
+            @include mobile{
+                font-size: 14px;
+                
+            }
+        }
+        p{
+            font-size: 16px;
+            opacity: 0.7;
+            @include pad{
+                font-size: 14px;
+                
+            }
+            
+        }
+        
+    }
+    &-Content{
+        color: $irongrey;
+        font-size: 20px;
+        @include pad{
+            font-size: 14px;
+            // height: 120px;
+            // overflow: hidden;
+        }
+        @include mobile{
+            display: none;
+        }
+        br{
+            @include pad{
+                display: none;
+            }
+        }
+
+        span{
+            @include pad{
+                display: inline-block;
+                max-width: 7%;
+                vertical-align: bottom;
+            }
+            
+            
+        }
+        .md-show-word{
+            display: none;
+            @include pad{
+                display: block;
+            }
+        }
+    }
+    &-MoreBtn{
+        text-align: right;
+        a{
+            color: $fontColor-darkred;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 36px;
+            display: block;
+            @include pad{
+                color: $irongrey;
+                font-size: 14px;
+            }
+    
+        }
+        &:hover{
+            opacity: 0.8; //cdn了bs5這裡自行設的樣式就沒了
+        }
+        @include mobile{
+            display: none;
+        }
+    }
+}
+.pagination-blog{
+    margin: 36px 0 160px;
+    @include pad{
+        margin: 40px 0 96px;
+    }
+    @include mobile{
+        margin: 20px 0 56px;
+    }
+    @include paginaTemp;
+    .page-Btn{
+        @include pageBtn;
+    }
+    .page-Num{
+       @include pageNumber;
+    }
+}
+
+
+
