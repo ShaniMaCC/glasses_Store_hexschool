@@ -1,16 +1,15 @@
 .blog-top{
-   font-weight: bold;
-   border-left: 8px solid $midred;
+   border-left: 8px solid $danger-400;
    @include pad{
-       border-left: 4px solid $brickred;
+       border-left: 4px solid $danger-500;
    }
    @include mobile{
-       font-size: 28px;
-       border-color: $midred;
+       font-size: $fz-xl;
+       border-color: $danger-400;
    } 
 }
 .blogCard{
-    position: relative;
+    position: relative; //stretched-link才有用
     &-Img{
         max-width: 57.2%;
         @include pad{
@@ -35,90 +34,62 @@
         
     }
     &-Title{
-        font-size: 32px;
-        color: $fontColor-darkred;
+        font-size: $fz-2xl;
+        color: $secondary;
         @include pad{
-            font-size: 20px;
+            font-size: $fz-md;
         }
         @include mobile{
-            font-size: 16px;
+            font-size: $fz-base;
         }
 
     }
     &-SubTitle{
         h5{
-            font-weight: bold;
             @include pad{
-                font-size: 16px;
+                font-size: $fz-base;
             }
             @include mobile{
-                font-size: 14px;
-                
+                font-size: $fz-xs;
             }
         }
         p{
-            font-size: 16px;
+            font-size: $fz-base;
             opacity: 0.7;
             @include pad{
-                font-size: 14px;
-                
+                font-size: $fz-xs;  
             }
             
         }
         
     }
     &-Content{
-        color: $irongrey;
-        font-size: 20px;
+        color: $grey-800;
+        font-size: $fz-md;
         @include pad{
-            font-size: 14px;
+            font-size: $fz-xs;
             // height: 120px;
             // overflow: hidden;
         }
-        @include mobile{
-            display: none;
-        }
-        br{
-            @include pad{
-                display: none;
-            }
-        }
-
         span{
-            @include pad{
-                display: inline-block;
+            @include pad{ //pad的時候才有要文字截斷
                 max-width: 7%;
                 vertical-align: bottom;
-            }
-            
-            
-        }
-        .md-show-word{
-            display: none;
-            @include pad{
-                display: block;
-            }
+            }       
         }
     }
     &-MoreBtn{
         text-align: right;
         a{
-            color: $fontColor-darkred;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 36px;
-            display: block;
+            color: $secondary;
+            font-size: $fz-3xl;
             @include pad{
-                color: $irongrey;
-                font-size: 14px;
+                color: $grey-800;
+                font-size: $fz-xs;
             }
-    
+            &:hover{
+                opacity: 0.8;
         }
-        &:hover{
-            opacity: 0.8; //cdn了bs5這裡自行設的樣式就沒了
-        }
-        @include mobile{
-            display: none;
         }
     }
 }

@@ -1,32 +1,35 @@
 body{
-  font-family:-apple-system, BlinkMacSystemFont, Roboto, "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-family:$ff-base;
+  font-size: $fz-base;
   line-height: 1.5;
 }
+a{
+  text-decoration: none;
+  display: block;
+  &:hover{
+    opacity: 0.5;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+*,*::before,*::after {
+  box-sizing: border-box;
+}
 h2{
-  font-size: 48px;
+  font-size: $fz-4xl;
 }
 h3{
-  font-size: 36px;
+  font-size: $fz-3xl;
 }
 h4{
-  font-size: 24px;
+  font-size: $fz-lg;
 }
 h5{
-  font-size: 20px;
+  font-size: $fz-md;
 }
 h6{
-  font-size: 14px;
-}
-/*容器*/
-.container{
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
-  @include pad{
-      max-width: 720px;
-  }
-  @include mobile{
-      max-width: 360px;
-  }
+  font-size: $fz-xs;
 }

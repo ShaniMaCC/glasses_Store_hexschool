@@ -1,12 +1,11 @@
 .faq{
     @include location-faq-Template;
-    .faq_top{
+    &-top{
         p{
-           font-size: 32px;
-           font-weight: bold; 
+           font-size: $fz-2xl;
         }
     }
-    .faq_main{
+    &-main{ //整個main對footer距離
         padding-bottom: 128px; /*160-mb32*/
         @include pad{
             padding-bottom: 72px; /*96-24*/
@@ -14,22 +13,11 @@
         @include mobile{
             padding-bottom: 36px; /*56-20*/
         }
-        .accordion-item{
-            .accordion-header{
-                font-weight: bold;
-            } 
-            .accordion-body{
-                p{
-                    @include mobile{
-                        font-size: 14px;
-                    }
-                }
-                .sm-show-break{
-                    display: none;
-                    @include mobile{
-                        display: block;
-                    }
-                }
+    }
+    .accordion-body{
+        p{
+            @include mobile{
+                font-size: $fz-xs;
             }
         }
     }

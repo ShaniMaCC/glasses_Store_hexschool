@@ -1,21 +1,53 @@
 //color
-$mainColor-red: #AA0601;
-$fontColor-darkred:#650300;
-$brightred:#AA0511;
-$midred:#9F1213;
-$brickred:#9C2015;
-$lightpink:#AA06010D;
-$white:#FFFFFF;
-$black:#000000;
-$light:#DEE2E6;
-$palegrey:#F2F2F2;
-$grey:#707070;
-$silver:#495057;
-$darkgrey:#212529;
-$midgrey:#DCDCDC;
-$lightgrey:#00000029;
-$irongrey:#555555;
-$brown:#5F3E2D;
-$darkorange:#B75929;
+//RED
 
-//font
+$primary:#AA0601; //300 主色:紅
+$secondary:#650300; //600 次要:深紅
+$danger-100:#AA06010D;//淡粉色
+$danger-200:#AA0511;
+$danger-400:#9F1213;
+$danger-500:#9C2015;
+
+
+$white:#FFFFFF;
+//$black:#000000;
+$dark:#000000;
+$dark-0A:#0A0A0A; //淺黑
+
+//GREY
+
+$grey-100:#F2F2F2;
+$grey-200:#DCDCDC;
+$grey-300:#DEE2E6;
+$grey-400:#00000029;//其實蠻淺的
+$grey-500:#6C6C6C;
+$grey-600:#707070; //灰色
+$grey-700:#495057;
+$grey-800:#555555;
+$grey-900:#212529;
+
+
+//ORANGE
+$orange-400:#B75929; //深橘
+$orange-800:#5F3E2D; //咖啡
+
+
+//font-size
+$fz-base : 16px;
+
+$fz-xs : $fz-base * 0.875; //14px
+$fz-sm : $fz-base * 1.125; //18px
+$fz-md : $fz-base * 1.25; //20px
+$fz-lg : $fz-base * 1.5; //24px
+$fz-xl : $fz-base * 1.75; //28px
+$fz-2xl : $fz-base * 2; //32px
+$fz-3xl : $fz-base * 2.25; //36px
+$fz-4xl : $fz-base * 3; //48px
+$fz-5xl : $fz-base * 4; //64px
+$fz-6xl : $fz-base * 4.5; //72px
+
+//space
+$space:8px;
+
+//font-family
+$ff-base:-apple-system, BlinkMacSystemFont, Roboto, "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;

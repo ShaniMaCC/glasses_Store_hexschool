@@ -1,15 +1,137 @@
+.material-icons-outlined-blogcontent{
+    font-family: 'Material Icons';
+    font-style: normal;
+    color: $primary;
+    height: 48px;
+    width: 48px;
+    vertical-align: bottom;
+    @include pad{
+        height: 24px;
+        width: 24px;
+    }
+    
+}
+.breadcrumb{
+    &-item{
+        a{
+            color: $dark;
+        }
+        
+    }
+    &-item.active{
+        color: $primary;
+    }
+}
+
 .blog-Tags{
+    //上右兩部分共同樣是
     a{
-        display: block;
-        text-decoration: none;
-        font-weight: bold;
-        color: $mainColor-red;
-        font-size: 24px;
+        color: $primary;
+        font-size: $fz-lg;
         @include pad{
-            font-size: 16px;
+            font-size: $fz-base;
         }
         @include mobile{
-            font-size: 14px;
+            font-size: $fz-xs;
+        }
+    }
+    .tags-Title{
+        font-size: $fz-xl;
+        color: $primary;
+        @include pad{
+            font-size: $fz-md;
+        }
+    }
+    .tags{ //ul的寬度
+        width: 278px;
+        @include pad{
+            width: 146px;
+        }
+        @include mobile{
+            width: 100%;
+        }
+    }
+}
+.blog-Event{
+    @include mobile{
+        margin-bottom: -4px; //lastcard到sharelinkmb20 - blogContent li mb24 =-4
+    }  
+}
+.blogContent{
+    max-width: 71.1%; //825/1110
+    @include pad{
+        max-width: 73.9%;
+    }
+    @include mobile{
+        max-width: 100%;
+    }
+    &-Title{
+        @include pad{
+            font-size: $fz-2xl;
+        }
+        @include mobile{
+            font-size: $fz-md;
+            color: $secondary;
+        }
+    }
+    &-SubTitle{
+        p{
+            font-size: $fz-xl;
+            @include pad{
+                font-size: $fz-base;
+            }
+            @include mobile{
+                font-size: $fz-xs;
+            }
+        }
+    }
+    &-date{
+        color: $grey-500;
+        font-size: $fz-base;
+        @include pad{
+            font-size: $fz-xs;
+        }
+    }
+    &-ShareLink{
+        a{
+            font-size: $fz-md;
+            color: $dark-0A;    
+            @include pad{
+                font-size: $fz-base;
+            }
+        }
+        
+    }
+    &-page{
+        a{
+            color: $dark;
+            font-size: 19px;
+            @include pad{
+                font-size: $fz-base;
+            }
+            @include mobile{
+                font-size: $fz-xs;
+                width: 100%;
+            }
+        }
+        
+    }
+}
+.blog-TagSide{
+    max-width: 22.8%; //blogtags117+113+24=254/1110+blogcontent71.1+mr30/1110
+    @include pad{
+        max: width 30%; ;
+    }
+    @include mobile{
+        max-width: 100%;
+    }
+}
+.eventCard{
+    h5{
+        color: $dark-0A;
+        opacity: 0.6;
+        @include pad{
+            font-size: $fz-base;
         }
     }
 }

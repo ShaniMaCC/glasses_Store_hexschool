@@ -28,14 +28,14 @@
         padding: 40px 0 56px;
         h2{
             margin-bottom: 32px;
-            font-size: 32px;
+            font-size: $fz-2xl;
         }
     }
     @include mobile{
         padding: 32px 0 40px;
         h2{
             margin-bottom: 20px;        
-            font-size: 20px;
+            font-size: $fz-md;
         }
     }
 }
@@ -45,7 +45,7 @@
     h4{
         text-align: center;
         font-weight: bold;
-        color: $fontColor-darkred;
+        color: $secondary;
         margin-bottom: 8px;
     }
 }
@@ -55,14 +55,14 @@
     height: 204px; /*可以不寫死高度,用padding上下推 但p段落要另外寫margin推日期*/
     position: relative;
     h6{
-        color: $darkgrey;
+        color: $grey-900;
     }
     p{
-        color: $darkgrey;
+        color: $grey-900;
     }
     span{
-        color: $grey;
-        font-size: 14px;
+        color: $grey-600;
+        font-size: $fz-xs;
         line-height: 21px;
         position: absolute;
         bottom: 16px;
@@ -72,27 +72,27 @@
 @mixin proCardDetailTemp {
     h4{
         @include pad{
-            font-size: 24px;
+            font-size: $fz-lg;
             line-height: 30px;
         }
         @include mobile{
-            font-size: 16px;
+            font-size: $fz-base;
         }
 
     }
     h4.prod-Price{
-        color: $mainColor-red;
+        color: $primary;
         font-weight: bold;
     } 
 }
 /*product card-color產品色塊*/
 @mixin prodColor-Brown {
-    background-color: $brown;
+    background-color: $orange-800;
     padding: 12px;
     border-radius: 4px;
 }
 @mixin prodColor-Orange {
-    background-color: $darkorange;
+    background-color: $orange-400;
     padding: 12px;
     border-radius: 4px;
 }
@@ -109,42 +109,42 @@
         font-weight: bold;
         margin-bottom: 60px;
         padding-left: 16px;
-        border-left: 8px solid $midred;
+        border-left: 8px solid $danger-400;
         @include pad{
             margin-bottom: 40px;
-            border-left: 4px solid $brickred;
+            border-left: 4px solid $danger-500;
         }
         @include mobile{
-            font-size: 28px;
+            font-size: $fz-xl;
             margin-bottom: 24px;
             padding-left: 8px;
-            border-color: $midred;
+            border-color: $danger-400;
         }
     }
 }
 /*location select設定*/
 @mixin locateSelectTemp {
     label{
-        font-size: 24px;
+        font-size: $fz-lg;
         @include pad{
-            font-size: 16px;
+            font-size: $fz-base;
         }
         @include mobile{
-            font-size: 14px;
+            font-size: $fz-xs;
         }
     }
     select{
-        font-size: 18px;
-        color:$silver;
+        font-size: $fz-sm;
+        color:$grey-700;
         height: 45px;
         width: 324px;
         @include pad{
-            font-size: 16px;
+            font-size: $fz-base;
             height: 46px;
             width: 237px;
         }
         @include mobile{
-            font-size: 14px;
+            font-size: $fz-xs;
             height: 36px;
             max-width: 76.9%;
 
@@ -155,12 +155,12 @@
 @mixin paginaTemp {
     text-align: center;
     li{
-        border: 1px solid $irongrey;
+        border: 1px solid $grey-800;
         margin-right: -1px;
         a{
             display: block;
             text-decoration: none;
-            color: $irongrey;
+            color: $grey-800;
         }        
     }
 }
@@ -179,15 +179,15 @@
             padding: 10.5px 12px;
         }
         &:hover{
-            background-color: $palegrey;
+            background-color: $grey-100;
         }
     }     
 }
 @mixin pageNumber {
-    font-size: 18px;
+    font-size: $fz-sm;
     line-height: 27px;
     @include mobile{
-        font-size: 16px;
+        font-size: $fz-base;
         line-height: 21px;
     }
     a{
@@ -197,7 +197,7 @@
         }
         &:hover{
             color: $white;
-            background-color: $black; 
+            background-color: $dark; 
         }
     }
 }

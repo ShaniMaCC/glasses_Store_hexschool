@@ -1,4 +1,4 @@
-.location{
+.loca{
     @include location-faq-Template;
     padding-bottom: 128px; /*160-li mb32*/
     @include pad{
@@ -7,25 +7,18 @@
     @include mobile{
         padding-bottom: 40px; /*56- li mb16*/
     }
-    .loca_top{
+    &-top{
         @include locateSelectTemp;
     }
-    .loca_main{
-        //找不到適合的方式讓卡片往右推30 但能平均在container中 
-        li.loca-Card{
+    &-main{
+        //找不到適合的方式讓卡片往右推30 又能平均在container中 
+        li.locaCard-Item{
             max-width: 33%;
-            //margin-right: 30px;
-            //margin-right: 1.8%;
-            padding-right: 30px;
-            margin-bottom: 32px;
             @include pad{
                 max-width: 50%;
-                margin-bottom: 20px;
             }
             @include mobile{
                 max-width: 100%;
-                margin-bottom: 16px;
-                padding-right: 0;
             }
             img{
                 width: 350px;
@@ -39,50 +32,40 @@
                 }
             }
         }
-        .locaCard-Body{ 
-            color: $darkgrey;
-            border: 1px solid $lightgrey;
-            .locaCard-Title{
-                padding: 12px 0 12px 24px;
-                border-bottom: 1px solid $lightgrey;
-                font-weight: bold;
-                @include pad{
-                    font-size: 16px;
-                    padding: 8px 0 8px 24px;
-                }
-                @include mobile{
-                    font-size: 14px;
-                }
+    }
+    .locaCard{
+        &-Body{ 
+            color: $grey-900;
+            border: 1px solid $grey-400;
+        }
+        &-Title{
+            padding: 12px 0 12px 24px;
+            border-bottom: 1px solid $grey-400;
+            @include pad{
+                font-size: $fz-base;
+                padding: 8px 0 8px 24px;
             }
-            .locaCard-Content{
-                padding: 16px 0 8px 24px; /*pb=16-li mb8 =8*/
-                li{
-                    margin-bottom: 8px;
-                    h5{
-                        @include pad{
-                            font-size: 14px;
-                        }
-                    }
+            @include mobile{
+                font-size: $fz-xs;
+            }
+        }
+        &-Content{
+            padding: 16px 0 8px 24px; /*pb=16-li mb8 =8*/
+            h5{
+                @include pad{
+                    font-size: $fz-xs;
                 }
             }
         }
-        .locaCard-Btn{
-            display: block;
-            text-decoration: none;
-            text-align: center;
+        &-Btn{
             color: $white;
-            background-color: $black;
+            background-color: $dark;
             font-size: 19px;
             padding: 20px 0;
-            &:hover{
-                opacity: 0.5;
-            }
             @include pad{
-                font-size: 14px;
+                font-size: $fz-xs;
                 padding: 16px 0;
             }
         }
-        
-        
     }
 }

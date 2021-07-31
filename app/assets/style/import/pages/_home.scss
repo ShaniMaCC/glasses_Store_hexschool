@@ -1,5 +1,15 @@
-// @import "../_variable.scss";
-// @import "../_mixin";
+/*icon-home*/
+.material-icons-outlined{
+    font-family: 'Material Icons';
+    font-style: normal;
+    color:$primary;
+    width: 44px;
+    height: 44px;
+    @include pad{
+        width: 40px;
+        height: 40px;
+    }
+  }
 .banner{
     background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") center center;
     background-size: cover;
@@ -10,7 +20,7 @@
     .slogan{
         text-align: right;
         padding-top: 348px;
-        color:$fontColor-darkred;
+        color:$secondary;
         @include pad{
             padding-top: 372px;
         }
@@ -18,26 +28,26 @@
             padding-top: 164px;
         }
         span{
-            font-size: 36px;
+            font-size: $fz-3xl;
             line-height: 54px;
             @include pad{
-                font-size: 20px;
+                font-size: $fz-md;
                 line-height: 30px;
             }
             @include mobile{
-                font-size: 16px;
+                font-size: $fz-base;
             }
         }
         p{
-            font-size: 64px;
+            font-size: $fz-5xl;
             line-height: 96px;
             font-weight: bold;
             @include pad{
-                font-size: 48px;
+                font-size: $fz-4xl;
                 line-height: 72px;
             }
             @include mobile{
-                font-size: 32px;
+                font-size: $fz-2xl;
                 line-height: 45px; /*設計稿lh=72px,但網頁看起來span與p距離和設計稿不符,所以改為h45px*/
             }
         }
@@ -46,7 +56,7 @@
 
 /*feature用專業的心做專業的事*/
 .feature{
-    background-color: $lightpink;
+    background-color: $danger-100;
     @include homeTemplate;
     @include pad{
         padding-bottom: 24px; /*56設計稿距離-32(li mb32)*/
@@ -55,7 +65,7 @@
         padding-bottom: 8px; /*40設計稿距離-32(li mb32)*/
     }
     h2{
-        color: $fontColor-darkred;
+        color: $secondary;
     }
     .fetCard-List{
         @include pad{
@@ -90,7 +100,7 @@
     @include homeTemplate;
     padding-bottom: 48px;/*80-li的mb32=48 &pad 56-li的mb8*/
     h2{
-        color:$fontColor-darkred;
+        color:$secondary;
     }
     .seriesType{
         li{
@@ -109,9 +119,9 @@
             }
         }
         p{
-            color: $mainColor-red;
+            color: $primary;
             font-style: italic;
-            font-size: 48px;
+            font-size: $fz-4xl;
             /* white-space: nowrap;
             overflow:auto;
             因設計稿fz48px SUNGLASSES&FUNCTIONAL 在1050時會換行行*/
@@ -119,7 +129,7 @@
             font-weight: bold;
             display: inline;
             @include pad{
-                font-size: 28px;
+                font-size: $fz-xl;
             }
             @include mobile{
                 position: absolute;
@@ -181,15 +191,15 @@
                 }
             }
             p{
-                font-size: 72px;
+                font-size: $fz-6xl;
                 line-height: 108px;
                 font-weight: 700;
                 position: absolute;
                 top: 38%;
                 left: 25%;
-                color: $mainColor-red;
+                color: $primary;
             @include pad{
-                font-size: 32px;
+                font-size: $fz-2xl;
                 line-height: 25px;
                 font-weight: bold;
                 top: 48%;
@@ -208,12 +218,12 @@
         padding-bottom: 24px;/*56-mb32 &mobile40-mb16*/
     }
     h2{
-        color: $fontColor-darkred;
+        color: $secondary;
     }
     .recCard-list{
         .rec-Card{
             max-width: 23%;
-            box-shadow: 0px 2px 6px $lightgrey;
+            box-shadow: 0px 2px 6px $grey-400;
             @include pad{
                 max-width: 47%;
             }
@@ -234,15 +244,15 @@
 /*contactUs聯絡我們*/
 .contactUs{
     @include homeTemplate;
-    background-color: $lightpink;
+    background-color: $danger-100;
     p{
         max-width: 730px;
-        font-size: 20px;
+        font-size: $fz-md;
         line-height: 30px;
         margin: 0 auto 20px;
         @include pad{
             max-width: 450px;
-            font-size: 16px;
+            font-size: $fz-base;
             line-height: 24px;
             margin: 0 auto 16px; /*120=(690-450)/2*/
         }
@@ -256,7 +266,7 @@
         @include pad{
             max-width: 450px;
             margin: 0 120px 8px; /*120=(690-450)/2*/
-            font-size: 14px;
+            font-size: $fz-xs;
             line-height: 21px;
         }
         @include mobile{
@@ -264,13 +274,13 @@
         }
         input{
             display: block;
-            border: 1px solid $black;
+            border: 1px solid $dark;
             height: 50px;
             width: 730px;
-            font-size: 16px;
+            font-size: $fz-base;
             line-height: 24px;
             @include pad{
-                font-size: 14px;
+                font-size: $fz-xs;
                 line-height: 21px;
                 height: 36px;
                 width: 450px;
@@ -286,12 +296,12 @@
             display: block;
             width: 100%;
             height: 136px;
-            border: 1px solid $black;
-            font-size: 16px;
+            border: 1px solid $dark;
+            font-size: $fz-base;
             line-height: 24px;
             @include pad{
                 height: 100px;
-                font-size: 14px;
+                font-size: $fz-xs;
                 line-height: 21px;
             }
         }
@@ -328,14 +338,14 @@
             height: 54px;
             color: $white;
             font-weight: bold;
-            font-size: 16px;
+            font-size: $fz-base;
             line-height: 24px;
-            background-color:$mainColor-red ;
+            background-color:$primary ;
             border: none;
             @include pad{
                 width: 210px;
                 height: 40px;
-                font-size: 14px;
+                font-size: $fz-xs;
                 line-height: 21px;
             }
             @include mobile{
@@ -343,7 +353,7 @@
                 height: 36px;
             }
             &:hover{
-                background-color:$fontColor-darkred ;
+                background-color:$secondary ;
             }
         } 
     }
