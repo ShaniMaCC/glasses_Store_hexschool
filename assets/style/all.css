@@ -1252,8 +1252,6 @@ h6 {
     border: 1px solid #555555;
     margin-right: -1px; }
     .pagination-op li a {
-      display: block;
-      text-decoration: none;
       color: #555555; }
   .pagination-op .page-Btn {
     font-size: 19px;
@@ -1270,7 +1268,8 @@ h6 {
         .pagination-op .page-Btn a {
           padding: 10.5px 12px; } }
       .pagination-op .page-Btn a:hover {
-        background-color: #F2F2F2; }
+        background-color: #F2F2F2;
+        opacity: 1; }
   .pagination-op .page-Num {
     font-size: 18px;
     line-height: 27px; }
@@ -1285,7 +1284,8 @@ h6 {
           padding: 12px 15px; } }
       .pagination-op .page-Num a:hover {
         color: #FFFFFF;
-        background-color: #000000; }
+        background-color: #000000;
+        opacity: 1; }
 
 /*sunglasses 分頁*/
 .pagination-sun {
@@ -1302,8 +1302,6 @@ h6 {
     border: 1px solid #555555;
     margin-right: -1px; }
     .pagination-sun li a {
-      display: block;
-      text-decoration: none;
       color: #555555; }
   .pagination-sun .page-Btn {
     font-size: 19px;
@@ -1320,7 +1318,8 @@ h6 {
         .pagination-sun .page-Btn a {
           padding: 10.5px 12px; } }
       .pagination-sun .page-Btn a:hover {
-        background-color: #F2F2F2; }
+        background-color: #F2F2F2;
+        opacity: 1; }
   .pagination-sun .page-Num {
     font-size: 18px;
     line-height: 27px; }
@@ -1335,7 +1334,8 @@ h6 {
           padding: 12px 15px; } }
       .pagination-sun .page-Num a:hover {
         color: #FFFFFF;
-        background-color: #000000; }
+        background-color: #000000;
+        opacity: 1; }
 
 .loca {
   padding-top: 96px;
@@ -1669,8 +1669,6 @@ h6 {
     border: 1px solid #555555;
     margin-right: -1px; }
     .pagination-blog li a {
-      display: block;
-      text-decoration: none;
       color: #555555; }
   .pagination-blog .page-Btn {
     font-size: 19px;
@@ -1687,7 +1685,8 @@ h6 {
         .pagination-blog .page-Btn a {
           padding: 10.5px 12px; } }
       .pagination-blog .page-Btn a:hover {
-        background-color: #F2F2F2; }
+        background-color: #F2F2F2;
+        opacity: 1; }
   .pagination-blog .page-Num {
     font-size: 18px;
     line-height: 27px; }
@@ -1702,7 +1701,8 @@ h6 {
           padding: 12px 15px; } }
       .pagination-blog .page-Num a:hover {
         color: #FFFFFF;
-        background-color: #000000; }
+        background-color: #000000;
+        opacity: 1; }
 
 .material-icons-outlined-blogcontent {
   font-family: 'Material Icons';
