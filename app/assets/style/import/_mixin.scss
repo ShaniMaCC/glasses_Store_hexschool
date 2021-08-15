@@ -158,8 +158,6 @@
         border: 1px solid $grey-800;
         margin-right: -1px;
         a{
-            display: block;
-            text-decoration: none;
             color: $grey-800;
         }        
     }
@@ -180,6 +178,7 @@
         }
         &:hover{
             background-color: $grey-100;
+            opacity: 1;
         }
     }     
 }
@@ -197,7 +196,8 @@
         }
         &:hover{
             color: $white;
-            background-color: $dark; 
+            background-color: $dark;
+            opacity: 1; 
         }
     }
 }
